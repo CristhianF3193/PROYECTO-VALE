@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const liveCountdownElement = document.getElementById("live-countdown");
     const monthlyDatesElement = document.getElementById("monthly-dates");
 
-    const startDate = new Date("October 9, 2024");
+    const startDate = new Date("October 9, 2024 14:20:00");
 
     function updateCountdown() {
         const now = new Date();

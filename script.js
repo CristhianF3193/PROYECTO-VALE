@@ -3,7 +3,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const monthlyDatesElement = document.getElementById("monthly-dates");
 
     const startDate = new Date("October 9, 2024");
-    const oneMonth = 30 * 24 * 60 * 60 * 1000; // Aproximadamente un mes en milisegundos
 
     function updateCountdown() {
         const now = new Date();
@@ -18,12 +17,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     setInterval(updateCountdown, 1000);
-    
+
     let countdownText = "";
 
     for (let i = 1; i <= 12; i++) {
-        let monthDate = new Date(startDate.getTime() + (oneMonth * i));
-        countdownText += `${i}º mes: ${monthDate.getDate()}/${monthDate.getMonth() + 1}/${monthDate.getFullYear()}<br><br>`;
+        let monthDate = new Date(startDate.getFullYear(), startDate.getMonth() + i, 9);
+        let options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        countdownText += `${i}º mes: ${monthDate.toLocaleDateString('es-ES', options)}<br><br>`;
     }
 
     monthlyDatesElement.innerHTML = countdownText;

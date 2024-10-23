@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const liveCountdownElement = document.getElementById("live-countdown");
     const monthlyDatesElement = document.getElementById("monthly-dates");
 
-    const startDate = new Date("October 9, 2024 14:20:00");
+    const startDate = new Date("October 9, 2024 00:00:00");
 
     function updateCountdown() {
         const now = new Date();
@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
 
-        liveCountdownElement.innerHTML = `Días: ${days}, Horas: ${hours}, Minutos: ${minutes}, Segundos: ${seconds}`;
+        liveCountdownElement.innerHTML = `${days} días, ${hours} horas:, ${minutes} minutos:, ${seconds} Segundos`;
     }
 
     setInterval(updateCountdown, 1000);

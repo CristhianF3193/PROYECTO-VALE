@@ -1,0 +1,15 @@
+body {
+    background-color: white;
+    color: #9933FF; /* Lila */
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 50px;
+}
+
+p {
+    text-align: center;
+    font-size: 18px;
+}

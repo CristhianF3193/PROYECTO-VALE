@@ -14,11 +14,11 @@ document.addEventListener("DOMContentLoaded", () => {
         const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
 
-        liveCountdownElement.innerHTML = `${days} días, ${hours} horas:, ${minutes} minutos:, ${seconds} Segundos`;
+        liveCountdownElement.innerHTML = `${days} días, ${hours} horas, ${minutes} minutos, ${seconds} Segundos`;
     
         // Calculate total days including partial days
         const totalDays = Math.ceil(timeDiff / (1000 * 60 * 60 * 24));
-        totalDaysElement.innerHTML = `Total de días: ${totalDays}`;
+        totalDaysElement.innerHTML = `Hoy es el día: ${totalDays}`;
     }
 
     setInterval(updateCountdown, 1000);
